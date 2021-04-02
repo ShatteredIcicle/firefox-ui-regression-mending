@@ -4,8 +4,8 @@ Fix Firefox UI regressions with css and provide patches for adjusting the look a
 
 Tweaks include:
 - Fixing megabar popout
-- Bringing back the sweet error page illustrations
-- Adding back icons to the hamburger and context menus
+- Bringing back the sweet error page illustrations ([error-page-illustrations.css](https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/content/error-page-illustrations.css))
+- Adding back icons to the hamburger and context menus ([menu-icons.cs](https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/chrome/menu-icons.css))
 - Reverting some aspects of the Proton design change to Photon style
 
 Overall I aim to make this a collection, so I may also include files from others, properly licensed. If you have any concerns over your work being used, please contact me.
