@@ -1,0 +1,41 @@
+/* Source file https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/chrome/contextmenu-icons.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* FF version: 89+
+Reverts as much as possible of tab appearance to pre-Proton (Photon) looks */
+
+/* First tab should be touching the left screen edge
+   but in Proton it is a few pixels right leaving blank space */
+.tabbrowser-tab[first-visible-tab] {
+    padding-inline-start: 0px !important;
+}
+
+/* Show top border line on the selected tab (was --tab-line-color in Photon) */
+.tabbrowser-tab[selected] > .tab-stack {
+	margin-bottom: 0px;
+	border: 1px none transparent !important;
+	border-top-color: var(--tabs-border-color) !important;
+	border-top-style: solid !important;
+}
+.tab-background[selected="true"] {
+	border-top: 2px solid currentColor !important;
+}
+
+/* Remove unnecessary padding that was not there before */
+.tabbrowser-tab {
+    padding-inline: 0px !important;
+}
+
+/* Other tab related changes like height, touching the bar */
+:root {
+  --tab-min-height: 32px !important; /* Height from before photon */
+  --proton-tab-block-margin: 0px !important; /* Tabs should touch the bar */
+  --tab-shadow-max-size: 0px !important; /* Leftmost tab when unselected is closer to the left (default: 8px in Proton)*/
+  --tab-border-radius: 0px !important; /* Remove rounded corners */
+}
+
+/* Old sound playing and muted icons */
+.tab-icon-overlay[soundplaying=true] { list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing.svg") !important; }
+.tab-icon-overlay[muted=true] { list-style-image: url(chrome://browser/skin/tabbrowser/tab-audio-muted.svg) !important; }
+
+/* Future plans involve making the sound icon appear to the right of the tab again and not disappear when not hovering over it */
