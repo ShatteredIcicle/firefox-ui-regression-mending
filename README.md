@@ -5,6 +5,7 @@ Fix Firefox UI regressions with css and provide patches for adjusting the look a
 Tweaks include:
 - Fixing megabar popout
 - Bringing back the sweet error page illustrations
+- Adding back icons to the hamburger and context menus
 - Reverting some aspects of the Proton design change to Photon style
 
 Overall I aim to make this a collection, so I may also include files from others, properly licensed. If you have any concerns over your work being used, please contact me.
