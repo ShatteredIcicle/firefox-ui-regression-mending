@@ -1,0 +1,187 @@
+/* Source file https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/chrome/contextmenu-icons.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* FF version: 89+
+
+Adds icons to the left of text labels in places where they were removed with the Proton design change.
+This aids pattern recognition and improves aesthetics as well as usability. */
+
+
+
+/* [SECTION]: Hamburger menu (top down) */
+
+#appMenu-fxa-label2::before {
+	content: "";
+	background-image: url("chrome://browser/skin/fxa/avatar.svg");
+	background-size: 16px 16px;
+	display: flex;
+	margin-inline: 0px 8px;
+	width: 16px;
+	height: 16px;
+}
+
+/* This changes the look of the top seperator to match the other seperators*/
+#appMenu-fxa-separator {
+  border-image: none !important;
+}
+
+#appMenu-new-tab-button2::before {
+	content: url("chrome://global/skin/icons/add.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-new-window-button2::before {
+	content: url("chrome://browser/skin/new-window.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-new-private-window-button2::before {
+	content: url("chrome://browser/skin/privateBrowsing.svg");
+	display: flex;
+	width: 16px;
+	height: 16px;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-bookmarks-button::before {
+	content: url("chrome://browser/skin/library.svg"); /* Or chrome://browser/skin/bookmark.svg */
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-history-button::before {
+	content: url("chrome://browser/skin/history.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-downloads-button::before {
+	content: url("chrome://browser/skin/downloads/download-icons.svg#arrow-with-bar");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-passwords-button::before {
+	content: "";
+	background-image: url("chrome://browser/skin/login.svg");
+	background-size: 16px 16px;
+	display: flex;
+	margin-inline: 0px 8px;
+	width: 16px;
+	height: 16px;
+}
+
+#appMenu-extensions-themes-button::before {
+	content: url("chrome://mozapps/skin/extensions/extension.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-print-button2::before {
+	content: url("chrome://global/skin/icons/print.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-find-button2::before {
+	content: url("chrome://global/skin/icons/search-glass.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-settings-button::before {
+	content: url("chrome://global/skin/icons/settings.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appmenu-moreTools-button::before {
+	content: url("chrome://browser/skin/customize.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+#appMenu-help-button2::before {
+	content: url("chrome://global/skin/icons/help.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+/* Select Task-Mananger with oncommand because of lack of better localization-independet selector */
+.subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"]::before {
+	content: "";
+	background-image: url("chrome://global/skin/icons/performance.svg");
+	background-size: 16px 16px;
+	display: flex;
+	margin-inline: 0px 8px;
+	width: 16px;
+	height: 16px;
+}
+
+#appMenu-quit-button2::before {
+	content: url("chrome://browser/skin/quit.svg");
+	display: flex;
+	margin-inline: 0px 8px;
+}
+
+
+
+/* [SECTION]: Collection */
+#appMenu-library-bookmarks-button::before {
+	content: url("chrome://browser/skin/bookmark.svg");
+	display: flex;
+	margin-inline: -2px 8px;
+}
+
+#appMenu-library-history-button::before {
+	content: url("chrome://browser/skin/history.svg");
+	display: flex;
+	margin-inline: -2px 8px;
+}
+
+#appMenu-library-downloads-button::before {
+	content: url("chrome://browser/skin/downloads/download-icons.svg#arrow-with-bar");
+	display: flex;
+	margin-inline: -2px 8px;
+}
+
+
+
+/* [SECTION]: Zoom Controls in Hamburger menu */
+#appMenu-zoomReduce-button2 {
+    list-style-image: url(chrome://browser/skin/zoom-out.svg) !important;
+}
+
+#appMenu-zoomReduce-button2 > .toolbarbutton-icon, #appMenu-zoomEnlarge-button2 > .toolbarbutton-icon {
+    border-radius: 0px !important; /*500px;*/
+    padding: 0px !important;/*2px;*/
+}
+
+#appMenu-zoomReduce-button2 > .toolbarbutton-icon, #appMenu-zoomEnlarge-button2 > .toolbarbutton-icon, #appMenu-fullscreen-button2 > .toolbarbutton-icon {
+    background-color: white !important;/*var(--zoom-controls-bgcolor, var(--button-bgcolor, ButtonFace));*/
+}
+
+#appMenu-fullscreen-button2 {
+    list-style-image: url(chrome://browser/skin/fullscreen.svg);
+    scale: 1.2 !important;
+}
+
+
+/* [SECTION]: Context menu */
+
+/* Restore icon for context menu item "Take screenshot" (that was removed in Firefox 89) */
+#context-take-screenshot::before {
+	content: "";
+	background-image: url(chrome://browser/skin/screenshot.svg);
+	background-size: 16px 16px;
+	margin-inline: 0px 8px;
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+
+/* Thanks to this website (https://css-tricks.com/almanac/properties/c/content/) for providing me with a way to resize the svg in content:
+  > You could also insert an image by using an empty string for the content, making it display: block in some way,
+  > sizing it, and using background-image. That way you could re-size it with background-size. */
