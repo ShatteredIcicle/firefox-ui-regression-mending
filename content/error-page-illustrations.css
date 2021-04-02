@@ -1,0 +1,94 @@
+/* Source file https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/content/error-page-illustrations.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* This readds the dino and bear illustrations on Firefox error pages (FF89+) */
+
+@-moz-document url-prefix("about:neterror?e=dnsNotFound") {
+	h1[data-l10n-id="dnsNotFound-title"][class="title-text"]::before {
+		content: url("chrome://browser/skin/illustrations/error-server-not-found.svg");
+		position: 50px 0px !important;
+		position: fixed;
+		margin-inline: -300px;
+		display: inline !important;
+	}
+}
+
+@-moz-document url-prefix("about:neterror?e=malformedURI") {	
+	h1[data-l10n-id="malformedURI-title"][class="title-text"]::before {
+	    content: url("chrome://browser/skin/illustrations/error-malformed-url.svg");
+		position: 50px 0px !important;
+		position: fixed;
+		margin-inline: -300px;
+		margin-top: -50px;
+		display: inline !important;
+	}	
+}
+
+
+
+@-moz-document url-prefix("about:neterror?e=fileNotFound") {
+	h1[data-l10n-id="fileNotFound-title"][class="title-text"] {
+		background-image: url("chrome://global/skin/icons/info.svg");
+		background-position: left 0;
+		background-repeat: no-repeat;
+		background-size: 1.6em;
+		margin-inline-start: -2.3em;
+		padding-inline-start: 2.3em;
+	}
+}
+
+@-moz-document url-prefix("about:tabcrashed") {
+	h1[data-l10n-id="crashed-header"][class="title-text"] {
+		background-image: url("chrome://browser/skin/tab-crashed.svg");
+		background-position: left 0;
+		background-repeat: no-repeat;
+		background-size: 1.6em !important;
+		margin-inline-start: -2.3em !important;
+		padding-inline-start: 2.3em !important;
+	}
+}
+
+/* DISABLED: The image is still present on the page in Nightly 89.0a1 (2021-03-29)
+@-moz-document url(about:robots), url(chrome://browser/content/aboutRobots.xhtml) {
+		h1[data-l10n-id="error-title-text"][class="title-text"] {
+		background-image: url("chrome://browser/content/aboutRobots-icon.png");
+		background-position: left 0;
+		background-repeat: no-repeat;
+		background-size: 1.6em !important;
+		margin-inline-start: -2.3em !important;
+		padding-inline-start: 2.3em !important;
+	}
+}*/
+
+@-moz-document url(about:welcomeBack), url("chrome://browser/content/aboutWelcomeBack.xhtml") {
+	h1[data-l10n-id="welcome-back-page-title"][class="title-text"] {
+		background-image: url("chrome://browser/skin/welcome-back.svg");
+		background-position: left 0;
+		background-repeat: no-repeat;
+		background-size: 1.6em  !important;
+		margin-inline-start: -2.3em !important;
+		padding-inline-start: 2.3em !important;
+	}
+}
+
+
+@-moz-document url("about:restartrequired"), url("chrome://browser/content/aboutRestartRequired.xhtml") {
+	h1[data-l10n-id="restart-required-header"][id="title-text"]::before {
+		content: url("chrome://browser/skin/illustrations/error-connection-failure.svg");
+		position: 30px 0px !important;
+		position: fixed;
+		margin-inline: -300px;
+		margin-top: -50px;
+		display: inline !important;
+	}
+}
+
+@-moz-document url(chrome://browser/content/aboutSessionRestore.xhtml), url("about:sessionrestore") {
+	h1[data-l10n-id="restore-page-error-title"][class="title-text"]::before {
+		content: url("chrome://browser/skin/illustrations/error-session-restore.svg");
+		position: 50px 0px !important;
+		position: fixed;
+		margin-inline: -300px;
+		display: inline !important;
+	}
+}
