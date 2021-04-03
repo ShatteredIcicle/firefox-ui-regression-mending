@@ -3,7 +3,8 @@
 Fix Firefox UI regressions with css and provide patches for adjusting the look and feel of the Firefox interface to your liking.
 
 Tweaks include:
-- Fixing megabar popout
+
+- Fixing megabar popout ([compact_urlbar_megabar.css](https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/chrome/compact_urlbar_megabar.css))
 - Bringing back the sweet error page illustrations ([error-page-illustrations.css](https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/content/error-page-illustrations.css))
 - Adding back icons to the hamburger and context menus ([menu-icons.css](https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/chrome/menu-icons.css))
 - Reverting some aspects of the Proton design change to Photon style
@@ -15,18 +16,20 @@ Overall I aim to make this a collection, so I may also include files from others
 # How to use
 
 #### 1. Set the preference to load stylesheets
+
 Go to `about:config` and set the pref `toolkit.legacyUserProfileCustomizations.stylesheets` to **`true`**.
 
 #### 2. Create the css files
+
 Go to `about:support` and click on the button "Open folder" besides `Profile folder` .
 
 In the profile folder, create a new folder called "chrome" and create two new files `userChrome.css` and `userContent.css` in there.
 
 #### 3. Importing styles from this repository
+
 You can import the stylesheets with an @-rule import like this:
 
 :warning: Always place your imports on top of the css file
-
 
 ```css
 @import url("path/filename.css");
