@@ -1,0 +1,11 @@
+/* Source file https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/chrome/ctr+f-close-button-right.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Moves close icon of the Ctrl+F search bar to the far right of the window.
+(Reverting the change to left introduced in Firefox 88.)
+
+Thanks to /u/bmFtZQ that solved the css calculation for me
+(https://old.reddit.com/r/FirefoxCSS/comments/mc7tcg/how_to_move_close_button_in_ctrlf_search_menu_to/) */
+.findbar-container { display: flex !important; padding-inline: 4px !important; }
+.findbar-closebutton { margin-inline: calc(100% - 20px) calc(100% * -1) !important; }
+.findbar-find-fast { padding-block: 5px !important; }
