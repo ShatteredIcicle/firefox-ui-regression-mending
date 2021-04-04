@@ -1,0 +1,26 @@
+/* Source file https://github.com/ShatteredIcicle/firefox-ui-regression-mending/tree/master/chrome/less-rounded-corners.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Removes most and lessens the radius of those nasty rounded corners (part of Proton reverting) */
+
+:root {
+	--arrowpanel-border-radius: 0px !important; /* Hamburger menu */
+	--arrowpanel-menuitem-border-radius: 0px !important; /* Hover overlay in hamburger menu */
+	--toolbarbutton-border-radius: 2px !important; /* Urlbar (less round) */
+	--tab-border-radius: 0px !important; /* Tabs */
+}
+
+/* "Do you really want to close all tabs?" dialogue */
+.dialogBox {
+    border-radius: 0px !important; 
+}
+
+/* Contextmenu */
+.menupopup-arrowscrollbox {
+	border-radius: 0px !important;
+}
+
+/* Bookmark edit screen */
+#editBookmarkPanelRows > vbox > input, #editBookmarkPanelRows > vbox > hbox > input, .panel-footer > button {
+	border-radius: 0px !important;
+}
