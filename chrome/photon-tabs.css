@@ -29,7 +29,7 @@ Reverts as much as possible of tab appearance to pre-Proton (Photon) looks */
 /* Other tab related changes like height, touching the bar */
 :root {
   --tab-min-height: 32px !important; /* Height from before photon */
-  --proton-tab-block-margin: 0px !important; /* Tabs should touch the bar */
+  --tab-block-margin: 0px !important; /* Tabs should touch the bar */
   --tab-shadow-max-size: 0px !important; /* Leftmost tab when unselected is closer to the left (default: 8px in Proton)*/
   --tab-border-radius: 0px !important; /* Remove rounded corners */
 }
