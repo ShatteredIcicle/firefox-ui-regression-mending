@@ -32,6 +32,7 @@ Reverts as much as possible of tab appearance to pre-Proton (Photon) looks */
   --tab-block-margin: 0px !important; /* Tabs should touch the bar */
   --tab-shadow-max-size: 0px !important; /* Leftmost tab when unselected is closer to the left (default: 8px in Proton)*/
   --tab-border-radius: 0px !important; /* Remove rounded corners */
+  --tabs-border-color: none; /* Removes fine line between toolbar and tab background */
 }
 
 /* Old sound playing and muted icons */
